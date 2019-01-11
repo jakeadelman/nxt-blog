@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import Link from "next/link";
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -31,12 +32,14 @@ export default class MyNavbar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand>Jake Adelman</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <Link href="/blog">
+                  <NavLink>Blog</NavLink>
+                </Link>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">

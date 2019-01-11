@@ -1,5 +1,43 @@
-div {
-  color: tomato;
+#main-div {
+  width: 50vw;
+  margin: auto;
+}
+
+#inside-paragraph {
+  text-align: center;
+}
+
+#profile-pic {
+  display: block;
+  margin: auto;
+  margin-bottom: 2em;
+  border-color: transparent;
+  box-shadow: 0 0 0 1px #000;
+
+  border-radius: 100em;
+  width: 12em;
+}
+
+#card {
+  max-width: 20%;
+}
+#explain {
+  margin-bottom: 10px;
+}
+#inside-explain {
+  margin: auto;
+}
+
+#backgroundimg {
+  background-image: url("/static/blue-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  padding: 2em;
+}
+
+#blog-content-container {
+  padding: 2em;
 }
 
 /*!
