@@ -1,8 +1,9 @@
-import "../index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyNavbar from "./components/MyNavbar";
-import HomeDiv from "./components/HomeDiv";
-import Explain from "./components/Explain";
+import "../index.css";
+
+import Explain from "../components/Explain";
+import HomeDiv from "../components/HomeDiv";
+import MyNavbar from "../components/MyNavbar";
 
 const Index = () => (
   <div>

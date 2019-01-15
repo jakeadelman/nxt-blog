@@ -1,9 +1,8 @@
 import React from "react";
-import MyNavbar from "./components/MyNavbar";
+import MyNavbar from "../components/MyNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import BlogMain from "./components/BlogMain";
 import * as contentful from "contentful";
-import BlogItem from "./components/BlogItem";
+import BlogItem from "../components/BlogItem";
 
 export default class Blog extends React.Component {
   state = {
@@ -18,7 +17,6 @@ export default class Blog extends React.Component {
 
   componentDidMount() {
     this.fetchPosts().then(this.setPosts);
-    console.log(this.state.posts);
   }
 
   fetchPosts = () => this.client.getEntries();
@@ -27,6 +25,8 @@ export default class Blog extends React.Component {
     this.setState({
       posts: response.items
     });
+    // this.state.posts.map(post => console.log(post.sys.id));
+    // console.log(this.state.posts, "LOGGING ALL POSTS");
   };
 
   render() {
@@ -34,8 +34,8 @@ export default class Blog extends React.Component {
       <div>
         <MyNavbar />
         <br />
-        {this.state.posts.map(({ fields }, i) => (
-          <BlogItem key={i} {...fields} />
+        {this.state.posts.map((each, i) => (
+          <BlogItem post={each} key={i} />
         ))}
       </div>
     );
