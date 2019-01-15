@@ -70,3 +70,15 @@ a {
 a:hover {
   color: #ff69b4;
 }
+
+.content-page-header-column {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+.content-page-header-title {
+  position: absolute;
+}
+/* .content-page-header-image {
+  filter: brightness(30%);
+} */

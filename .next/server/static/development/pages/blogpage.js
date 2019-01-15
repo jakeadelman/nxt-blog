@@ -107,6 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! contentful */ "contentful");
 /* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(contentful__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _BlogHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BlogHeader */ "./components/BlogHeader.js");
 var _jsxFileName = "/Users/manx/projects/blog/components/BlogContent.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -130,7 +131,8 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
- // const rtfm = require("@contentful/rich-text-from-markdown");
+
+
 
 var marked = __webpack_require__(/*! marked */ "marked");
 
@@ -156,19 +158,31 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "fetchPosts", function (entry) {
-      return _this.client.getEntry(entry);
+      return _this.client.getEntries({
+        "sys.id": entry
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setImg", function (response) {
+      console.log(response);
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setPosts", function (response) {
-      var res = response.fields;
-      res = res.body;
+      var assets = response.includes.Asset;
+      var heroImg = assets[0];
+      heroImg = heroImg.fields.file.url;
+      heroImg = "https:" + heroImg + "?w=700&h=700";
+      var preFormatBody = response.items[0].fields.body;
+      var title = response.items[0].fields.title;
 
       _this.setState({
-        posts: response,
-        markdown: marked(res)
+        heroImg: heroImg,
+        posts: response.items[0],
+        markdown: marked(preFormatBody),
+        title: title
       });
 
-      console.log(_this.state.posts.fields.heroImage.sys.id);
+      console.log(_this.state.posts); // return response.fields.heroImage.sys.id;
     });
 
     _this.state = {
@@ -180,23 +194,36 @@ function (_React$Component) {
   _createClass(BlogContent, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.fetchPosts(this.props.id).then(this.setPosts).then(this.fetchImg().then(function (res) {
-        return console.log(res);
-      }));
-    }
+      this.fetchPosts(this.props.id).then(this.setPosts); // .then(response => this.fetchImg(response).then(this.setImg));
+    } // this.fetchImg(this.state.heroImage).then(this.setImg)
+
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BlogHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        title: this.state.title,
+        image: this.state.heroImg,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         dangerouslySetInnerHTML: {
           __html: this.state.markdown
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 58
         },
         __self: this
-      });
+      }));
     }
   }]);
 
@@ -222,25 +249,42 @@ var _jsxFileName = "/Users/manx/projects/blog/components/BlogHeader.js";
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content-page-header-row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 2
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "content-page-header",
+    className: "content-page-header-column",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
     },
     __self: this
-  }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "content-page-header-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
     },
     __self: this
-  }, props.image));
+  }, props.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content-page-header-column",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.image,
+    className: "content-page-header-image",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  })));
 });
 
 /***/ }),
@@ -627,18 +671,11 @@ var Content = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(fun
       lineNumber: 11
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_BlogHeader__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    title: props.router.query.title,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_BlogContent__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_BlogContent__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: props.router.query.id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     },
     __self: this
   }));
@@ -648,20 +685,20 @@ var BlogPage = function BlogPage(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "fonty",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Content, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 19
     },
     __self: this
   })));

@@ -1,7 +1,7 @@
 import React from "react";
 import * as contentful from "contentful";
+import BlogHeader from "./BlogHeader";
 
-// const rtfm = require("@contentful/rich-text-from-markdown");
 const marked = require("marked");
 
 export default class BlogContent extends React.Component {
@@ -19,25 +19,44 @@ export default class BlogContent extends React.Component {
   });
 
   componentDidMount() {
-    this.fetchPosts(this.props.id)
-      .then(this.setPosts)
-      .then(this.fetchImg().then(res => console.log(res)));
+    this.fetchPosts(this.props.id).then(this.setPosts);
+    // .then(response => this.fetchImg(response).then(this.setImg));
   }
 
+  // this.fetchImg(this.state.heroImage).then(this.setImg)
   fetchImg = entry => this.client.getAssets(entry);
-  fetchPosts = entry => this.client.getEntry(entry);
+
+  fetchPosts = entry => this.client.getEntries({ "sys.id": entry });
+
+  setImg = response => {
+    console.log(response);
+  };
 
   setPosts = response => {
-    let res = response.fields;
-    res = res.body;
+    let assets = response.includes.Asset;
+    let heroImg = assets[0];
+    heroImg = heroImg.fields.file.url;
+    heroImg = "https:" + heroImg + "?w=700&h=700";
+    let preFormatBody = response.items[0].fields.body;
+    let title = response.items[0].fields.title;
+
     this.setState({
-      posts: response,
-      markdown: marked(res)
+      heroImg: heroImg,
+      posts: response.items[0],
+      markdown: marked(preFormatBody),
+      title: title
     });
-    console.log(this.state.posts.fields.heroImage.sys.id);
+    console.log(this.state.posts);
+
+    // return response.fields.heroImage.sys.id;
   };
 
   render() {
-    return <td dangerouslySetInnerHTML={{ __html: this.state.markdown }} />;
+    return (
+      <div>
+        <BlogHeader title={this.state.title} image={this.state.heroImg} />
+        <td dangerouslySetInnerHTML={{ __html: this.state.markdown }} />
+      </div>
+    );
   }
 }

@@ -9,7 +9,6 @@ import BlogHeader from "../components/BlogHeader";
 
 const Content = withRouter(props => (
   <div>
-    <BlogHeader title={props.router.query.title} />
     <BlogContent id={props.router.query.id} />
   </div>
 ));
