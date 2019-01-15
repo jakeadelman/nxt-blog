@@ -19,11 +19,12 @@ export default class BlogContent extends React.Component {
   });
 
   componentDidMount() {
-    this.fetchPosts(this.props.id).then(this.setPosts);
-    this.fetchImg().then(res => console.log(res));
+    this.fetchPosts(this.props.id)
+      .then(this.setPosts)
+      .then(this.fetchImg().then(res => console.log(res)));
   }
 
-  fetchImg = entry => this.client.getAssets();
+  fetchImg = entry => this.client.getAssets(entry);
   fetchPosts = entry => this.client.getEntry(entry);
 
   setPosts = response => {
@@ -33,7 +34,7 @@ export default class BlogContent extends React.Component {
       posts: response,
       markdown: marked(res)
     });
-    console.log(this.state.posts);
+    console.log(this.state.posts.fields.heroImage.sys.id);
   };
 
   render() {

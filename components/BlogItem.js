@@ -23,10 +23,14 @@ export default class BlogItem extends React.Component {
         fields: this.props.post.fields,
         sys: this.props.post.sys
       });
+      console.log(this.props.post.fields.title);
     }
   }
 
   render() {
+    if (this.state) {
+      console.log(this.state.fields);
+    }
     return (
       <div className="box content">
         <h1>{this.props.title}</h1>
@@ -35,10 +39,7 @@ export default class BlogItem extends React.Component {
         <div>
           {this.state.fields ? (
             <PostLink title={this.state.fields.title} id={this.state.sys.id} />
-          ) : // <Link route={"/blogpage/" + this.state.fields.slug}>
-          //   <a>Click Me</a>
-          // </Link>
-          null}
+          ) : null}
         </div>
       </div>
     );

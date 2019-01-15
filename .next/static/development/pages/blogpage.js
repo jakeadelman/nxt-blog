@@ -58,7 +58,7 @@ function (_React$Component) {
     }));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "fetchImg", function (entry) {
-      return _this.client.getAssets();
+      return _this.client.getAssets(entry);
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "fetchPosts", function (entry) {
@@ -74,7 +74,7 @@ function (_React$Component) {
         markdown: marked(res)
       });
 
-      console.log(_this.state.posts);
+      console.log(_this.state.posts.fields.heroImage.sys.id);
     });
 
     _this.state = {
@@ -86,10 +86,9 @@ function (_React$Component) {
   _createClass(BlogContent, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.fetchPosts(this.props.id).then(this.setPosts);
-      this.fetchImg().then(function (res) {
+      this.fetchPosts(this.props.id).then(this.setPosts).then(this.fetchImg().then(function (res) {
         return console.log(res);
-      });
+      }));
     }
   }, {
     key: "render",
@@ -100,7 +99,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 41
         },
         __self: this
       });
@@ -135,6 +134,7 @@ var _jsxFileName = "/Users/manx/projects/blog/components/BlogHeader.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "content-page-header",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3

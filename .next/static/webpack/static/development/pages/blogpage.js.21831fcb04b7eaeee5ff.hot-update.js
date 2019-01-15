@@ -58,7 +58,7 @@ function (_React$Component) {
     }));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "fetchImg", function (entry) {
-      return _this.client.getAssets();
+      return _this.client.getAssets(entry);
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "fetchPosts", function (entry) {
@@ -86,10 +86,9 @@ function (_React$Component) {
   _createClass(BlogContent, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.fetchPosts(this.props.id).then(this.setPosts);
-      this.fetchImg().then(function (res) {
+      this.fetchPosts(this.props.id).then(this.setPosts).then(this.fetchImg(his.state.posts.fields.heroImage.sys.id).then(function (res) {
         return console.log(res);
-      });
+      }));
     }
   }, {
     key: "render",
@@ -100,7 +99,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 45
         },
         __self: this
       });
@@ -115,4 +114,4 @@ function (_React$Component) {
 /***/ })
 
 })
-//# sourceMappingURL=blogpage.js.424b5108b10e67f7883e.hot-update.js.map
+//# sourceMappingURL=blogpage.js.21831fcb04b7eaeee5ff.hot-update.js.map
