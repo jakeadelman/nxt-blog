@@ -2,13 +2,14 @@ import React from "react";
 import { withRouter } from "next/router";
 import BlogContent from "../components/BlogContent";
 import Layout from "../components/Layout";
-import "../fonts.css";
+import "../index.css";
+import Document, { Head } from "next/document";
+import Fonts from "../components/Fonts";
+import BlogHeader from "../components/BlogHeader";
 
 const Content = withRouter(props => (
   <div>
-    <h1>{props.router.query.title}</h1>
-    <p>this is content</p>
-    <p>{props.router.query.id}</p>
+    <BlogHeader title={props.router.query.title} />
     <BlogContent id={props.router.query.id} />
   </div>
 ));

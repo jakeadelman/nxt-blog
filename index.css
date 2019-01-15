@@ -39,3 +39,34 @@
 #blog-content-container {
   padding: 2em;
 }
+
+* {
+  font-family: Josefin Sans;
+}
+
+.fonty {
+  line-height: 2;
+  margin: 0 auto 0 auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .fonty {
+    max-width: 45vw;
+  }
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
+a {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #ff69b4;
+}

@@ -1,16 +1,28 @@
 import Navbar from "./MyNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import Fonts from "./Fonts";
 
 const layoutStyle = {
   margin: 20,
   padding: 20
 };
 
-const Layout = props => (
-  <div>
-    <Navbar />
-    <div style={layoutStyle}>{props.children}</div>
-  </div>
-);
+export default class extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-export default Layout;
+  componentDidMount() {
+    Fonts();
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <div style={layoutStyle}>{this.props.children}</div>
+      </div>
+    );
+  }
+}

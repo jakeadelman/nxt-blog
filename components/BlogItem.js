@@ -23,14 +23,10 @@ export default class BlogItem extends React.Component {
         fields: this.props.post.fields,
         sys: this.props.post.sys
       });
-      console.log(this.props.post);
     }
   }
 
   render() {
-    if (this.state.fields) {
-      console.log(this.state.fields.title);
-    }
     return (
       <div className="box content">
         <h1>{this.props.title}</h1>
