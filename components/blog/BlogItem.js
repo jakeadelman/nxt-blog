@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Row, Col } from "reactstrap";
 
 const PostLink = props => (
   <div>
@@ -21,25 +22,45 @@ export default class BlogItem extends React.Component {
         fields: this.props.post.fields,
         sys: this.props.post.sys
       });
-      console.log(this.props.post.fields.title);
+      console.log(this.props);
+      if (
+        this.props.post.fields.heroImage &&
+        this.props.post.fields.heroImage.sys.type == "Asset"
+      ) {
+        let img =
+          "http:" +
+          this.props.post.fields.heroImage.fields.file.url +
+          "?fit=thumb&f=top_left&h=100&w=100&r=180";
+        this.setState({
+          img: img
+        });
+      }
     }
   }
 
   render() {
-    if (this.state) {
-      console.log(this.state.fields);
-    }
     return (
-      <div className="box content">
-        <h1>{this.props.title}</h1>
-        <p>{this.props.content}</p>
+      <Row className="blogrow">
+        <h1>{this.props.post.fields.title}</h1>
+        <p>{this.props.post.fields.description}</p>
+        <div className="blogpage-img">
+          {this.state.img ? <img src={this.state.img} /> : null}
+        </div>
 
         <div>
           {this.state.fields ? (
             <PostLink title={this.state.fields.title} id={this.state.sys.id} />
           ) : null}
         </div>
-      </div>
+        <style jsx>
+          {`
+            .blogpage-img {
+              float: left;
+              margin-right: 1em;
+            }
+          `}
+        </style>
+      </Row>
     );
   }
 }

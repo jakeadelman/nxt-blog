@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
 import React from "react";
-
+import Layout from "../components/layouts/HomePage";
 import BlogCard from "../components/index/BlogCard";
 
 import Explain from "../components/index/Explain";
@@ -13,13 +13,9 @@ import Rotate from "react-reveal/Rotate";
 import Flip from "react-reveal/Flip";
 
 class Index extends React.Component {
-  componentDidMount() {
-    Fonts();
-  }
-
   render() {
     return (
-      <div>
+      <Layout>
         <div id="backgroundimg">
           <MyNavbar className="navbar" />
           <div id="main-div">
@@ -33,7 +29,7 @@ class Index extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </Layout>
     );
   }
 }

@@ -56,7 +56,7 @@ export default class BlogContent extends React.Component {
       slug: slug,
       tags: tags
     });
-    console.log(this.state.author);
+    console.log(assets, "THIS RES");
 
     // return response.fields.heroImage.sys.id;
   };

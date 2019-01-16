@@ -34,16 +34,7 @@ export default class extends React.Component {
             color: #808080;
           }
         `}</style>
-        <Navbar />
-        <div className="fonto">{this.props.children}</div>
-        <style jsx>
-          {`
-            .fonto {
-              padding: 20px;
-              margin: 20px;
-            }
-          `}
-        </style>
+        <div>{this.props.children}</div>
       </div>
     );
   }

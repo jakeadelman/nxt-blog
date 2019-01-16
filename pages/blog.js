@@ -3,6 +3,7 @@ import MyNavbar from "../components/index/MyNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as contentful from "contentful";
 import BlogItem from "../components/blog/BlogItem";
+import Layout from "../components/layouts/BlogArticlesPage";
 
 export default class Blog extends React.Component {
   state = {
@@ -29,13 +30,21 @@ export default class Blog extends React.Component {
 
   render() {
     return (
-      <div>
-        <MyNavbar />
+      <Layout>
         <br />
-        {this.state.posts.map((each, i) => (
-          <BlogItem post={each} key={i} />
-        ))}
-      </div>
+        <div className="boxy">
+          {this.state.posts.map((each, i) => (
+            <BlogItem post={each} key={i} className="boxy" />
+          ))}
+        </div>
+        <style jsx>
+          {`
+            boxy {
+              display: block;
+            }
+          `}
+        </style>
+      </Layout>
     );
   }
 }
