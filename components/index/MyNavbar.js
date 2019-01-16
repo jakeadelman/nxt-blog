@@ -70,6 +70,15 @@ export default class MyNavbar extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
+        <style jsx>{`
+          a {
+            color: rgba(0, 0, 0, 0.5);
+          }
+          a:hover {
+            color: rgba(0, 0, 0, 0.7);
+            text-decoration: none;
+          }
+        `}</style>
       </div>
     );
   }

@@ -50,6 +50,7 @@ export default class extends React.Component {
           <BlogArticleCard
             title={each.fields.title}
             description={each.fields.description}
+            id={each.sys.id}
             date={formatDate(each.fields.publishDate, "mediumDate")}
             key={i}
           />

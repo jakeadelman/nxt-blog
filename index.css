@@ -94,6 +94,10 @@
   .fonty {
     max-width: 45vw;
   }
+
+  #main-div {
+    width: 36vw;
+  }
 }
 
 h2 {
@@ -101,16 +105,6 @@ h2 {
   font-weight: 600;
   margin-bottom: 0.6em;
 }
-
-/* a {
-  color: #000000;
-  text-decoration: underline;
-  font-weight: 600;
-} */
-
-/* a:hover {
-  color: #989898;
-} */
 
 .content-page-header-column {
   float: left;
