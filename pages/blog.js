@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import * as contentful from "contentful";
 import BlogItem from "../components/blog/BlogItem";
 import Layout from "../components/layouts/BlogArticlesPage";
+import BlogCard from "../components/index/BlogCard2";
+import Flip from "react-reveal/Flip";
 
 export default class Blog extends React.Component {
   state = {
@@ -32,19 +34,16 @@ export default class Blog extends React.Component {
     return (
       <Layout>
         <br />
-        <div className="boxy">
-          {this.state.posts.map((each, i) => (
-            <BlogItem post={each} key={i} className="boxy" />
-          ))}
-        </div>
-        <style jsx>
-          {`
-            boxy {
-              display: block;
-            }
-          `}
-        </style>
+        <Flip left>
+          <BlogCard />
+        </Flip>
       </Layout>
     );
   }
 }
+
+// <div className="boxy">
+//           {this.state.posts.map((each, i) => (
+//             <BlogItem post={each} key={i} className="boxy" />
+//           ))}
+//         </div>

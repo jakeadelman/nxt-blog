@@ -1,6 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import { Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
+
+const Img = props => (
+  <Col className="img-col">
+    <div className="blogpage-img">
+      <img src={props.img} />
+    </div>
+    <style jsx>
+      {`
+        .blogpage-img {
+          max-width: 10%;
+          padding: 0;
+          margin: 0;
+        }
+      `}
+    </style>
+  </Col>
+);
 
 const PostLink = props => (
   <div>
@@ -40,27 +57,40 @@ export default class BlogItem extends React.Component {
 
   render() {
     return (
-      <Row className="blogrow">
-        <h1>{this.props.post.fields.title}</h1>
-        <p>{this.props.post.fields.description}</p>
-        <div className="blogpage-img">
-          {this.state.img ? <img src={this.state.img} /> : null}
-        </div>
-
-        <div>
-          {this.state.fields ? (
-            <PostLink title={this.state.fields.title} id={this.state.sys.id} />
+      <Container className="blog-row-div">
+        <Row className="blogrow">
+          {this.state.img ? (
+            <Img img={this.state.img} className="blog-col-img" />
           ) : null}
-        </div>
-        <style jsx>
-          {`
-            .blogpage-img {
-              float: left;
-              margin-right: 1em;
-            }
-          `}
-        </style>
-      </Row>
+          <Col className="blogcol">
+            <h1>{this.props.post.fields.title}</h1>
+          </Col>
+
+          <style jsx>
+            {`
+              .blogpage-img {
+                float: left;
+                margin-right: 1em;
+              }
+              .blog-col-img {
+                max-width: 20%;
+              }
+            `}
+          </style>
+        </Row>
+        <Row className="desc-row">
+          <p>{this.props.post.fields.description}</p>
+        </Row>
+      </Container>
     );
   }
 }
+
+// <div>
+//             {this.state.fields ? (
+//               <PostLink
+//                 title={this.state.fields.title}
+//                 id={this.state.sys.id}
+//               />
+//             ) : null}
+//           </div>
