@@ -157,3 +157,24 @@ a:hover {
 .navbar-link {
   text-decoration: none;
 }
+
+.fonty {
+  line-height: 2;
+  margin: 0 auto 0 auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .fonty {
+    max-width: 45vw;
+  }
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
+* {
+  font-family: Josefin Sans;
+}

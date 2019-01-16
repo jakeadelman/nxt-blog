@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "devo": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "devo start": "NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "keywords": [],
   "author": "",
@@ -25,15 +23,12 @@
     "marked": "^0.6.0",
     "next": "^7.0.2",
     "next-routes": "^1.4.2",
-    "path-to-regexp": "^3.0.0",
     "popper.js": "^1.14.6",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.7.0",
     "react-reveal": "^1.2.2",
-    "react-scrollreveal": "^1.2.0",
     "reactstrap": "^7.0.2",
-    "scrollreveal": "^4.0.5",
     "string-to-html": "^1.3.4"
   }
 }
