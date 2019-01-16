@@ -1,11 +1,8 @@
 import React from "react";
 import { withRouter } from "next/router";
-import BlogContent from "../components/BlogContent";
-import Layout from "../components/Layout";
+import BlogContent from "../components/blogpage/BlogContent";
+import Layout from "../components/index/Layout";
 import "../index.css";
-import Document, { Head } from "next/document";
-import Fonts from "../components/Fonts";
-import BlogHeader from "../components/BlogHeader";
 
 const Content = withRouter(props => (
   <div>

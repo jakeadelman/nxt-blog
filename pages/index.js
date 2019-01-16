@@ -1,11 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
 import React from "react";
+// import ScrollReveal from "../components/effects/RevealMe";
 
-import Explain from "../components/Explain";
-import HomeDiv from "../components/HomeDiv";
-import MyNavbar from "../components/MyNavbar";
-import Fonts from "../components/Fonts";
+import Explain from "../components/index/Explain";
+import HomeDiv from "../components/index/HomeDiv";
+import MyNavbar from "../components/index/MyNavbar";
+import Fonts from "../components/index/Fonts";
 
 class Index extends React.Component {
   componentDidMount() {
@@ -24,7 +25,6 @@ class Index extends React.Component {
               id="profile-pic"
             />
             <Explain />
-            <HomeDiv />
           </div>
         </div>
       </div>

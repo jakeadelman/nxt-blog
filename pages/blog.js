@@ -1,8 +1,8 @@
 import React from "react";
-import MyNavbar from "../components/MyNavbar";
+import MyNavbar from "../components/index/MyNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as contentful from "contentful";
-import BlogItem from "../components/BlogItem";
+import BlogItem from "../components/blog/BlogItem";
 
 export default class Blog extends React.Component {
   state = {
