@@ -39,14 +39,24 @@ export default class BlogContent extends React.Component {
     heroImg = "https:" + heroImg + "?w=700&h=700";
     let preFormatBody = response.items[0].fields.body;
     let title = response.items[0].fields.title;
+    let author = response.items[0].fields.author;
+    author = author.fields.name;
+    let description = response.items[0].fields.description;
+    let publishDate = response.items[0].fields.publishDate;
+    let slug = response.items[0].fields.slug;
+    let tags = response.items[0].fields.tags;
 
     this.setState({
       heroImg: heroImg,
       posts: response.items[0],
       markdown: marked(preFormatBody),
-      title: title
+      title: title,
+      author: author,
+      publishDate: publishDate,
+      slug: slug,
+      tags: tags
     });
-    console.log(this.state.posts);
+    console.log(this.state.author);
 
     // return response.fields.heroImage.sys.id;
   };
@@ -54,8 +64,16 @@ export default class BlogContent extends React.Component {
   render() {
     return (
       <div>
-        <BlogHeader title={this.state.title} image={this.state.heroImg} />
-        <td dangerouslySetInnerHTML={{ __html: this.state.markdown }} />
+        <BlogHeader
+          title={this.state.title}
+          image={this.state.heroImg}
+          author={this.state.author}
+          description={this.state.description}
+          publishDate={this.state.publishDate}
+        />
+        <div>
+          <td dangerouslySetInnerHTML={{ __html: this.state.markdown }} />
+        </div>
       </div>
     );
   }
