@@ -1,14 +1,7 @@
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button
-} from "reactstrap";
 import * as contentful from "contentful";
 import React from "react";
+import BlogArticleCard from "./BlogArticleCard";
+const formatDate = require("dateformat");
 
 // const BlogCard = props => (
 //   <div id="explain">
@@ -51,8 +44,16 @@ export default class extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>this is paragraph</p>
+      <div className="blog-cards-homepage">
+        <h1 className="home-blog-title">scribbles from the blog..</h1>
+        {this.state.posts.map((each, i) => (
+          <BlogArticleCard
+            title={each.fields.title}
+            description={each.fields.description}
+            date={formatDate(each.fields.publishDate, "mediumDate")}
+            key={i}
+          />
+        ))}
       </div>
     );
   }

@@ -13,10 +13,41 @@
 .navbar-img {
   width: 50%;
   border-radius: 100%;
+  border: 1px solid black;
 }
 
 .inside-main-div {
   margin-top: 20vh;
+}
+
+.home-blog-title {
+  margin-top: 4em;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.home-date {
+  /* float: right; */
+  font-size: 0.7em;
+  color: grey;
+  margin: auto;
+  margin-right: 0;
+  padding: 0.2em;
+  padding-right: 0.7em;
+  display: inline;
+}
+
+.home-blog-article-title {
+  text-align: center;
+  font-size: 1.2em;
+
+  /* text-decoration: underline;
+  text-decoration-style: wavy;
+ */
+}
+
+.blog-article-card {
+  margin-bottom: 0.45em;
 }
 
 #inside-paragraph {
