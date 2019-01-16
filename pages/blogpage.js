@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "next/router";
 import BlogContent from "../components/blogpage/BlogContent";
-import Layout from "../components/index/Layout";
+import Layout from "../components/layouts/BlogPage";
 import "../index.css";
 
 const Content = withRouter(props => (

@@ -102,15 +102,15 @@ h2 {
   margin-bottom: 0.6em;
 }
 
-a {
+/* a {
   color: #000000;
   text-decoration: underline;
   font-weight: 600;
-}
+} */
 
-a:hover {
+/* a:hover {
   color: #989898;
-}
+} */
 
 .content-page-header-column {
   float: left;
