@@ -13,6 +13,7 @@ import {
   DropdownItem
 } from "reactstrap";
 import Link from "next/link";
+import "../../index.css";
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -31,10 +32,10 @@ export default class MyNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="none" light expand="md">
           <NavbarBrand>
             <Link href="/">
-              <a className="navbar-link">Jake Adelman</a>
+              <img src="/static/profile8.jpg" className="navbar-img" />
             </Link>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />

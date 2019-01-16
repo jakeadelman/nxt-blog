@@ -10,6 +10,15 @@
   margin: auto;
 }
 
+.navbar-img {
+  width: 50%;
+  border-radius: 100%;
+}
+
+.inside-main-div {
+  margin-top: 20vh;
+}
+
 #inside-paragraph {
   text-align: center;
 }
@@ -36,11 +45,12 @@
 }
 
 #backgroundimg {
-  background-image: url("/static/blue-background.jpg");
+  background-image: url("/static/blobs.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
-  padding: 2em;
 }
 
 #blog-content-container {

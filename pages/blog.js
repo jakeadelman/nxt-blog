@@ -25,8 +25,6 @@ export default class Blog extends React.Component {
     this.setState({
       posts: response.items
     });
-    // this.state.posts.map(post => console.log(post.sys.id));
-    // console.log(this.state.posts, "LOGGING ALL POSTS");
   };
 
   render() {
