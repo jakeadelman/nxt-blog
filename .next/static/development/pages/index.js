@@ -356,9 +356,9 @@ var _jsxFileName = "/Users/manx/projects/blog/components/index/Explain.js";
       lineNumber: 16
     },
     __self: this
-  }, "Hi! My name is Jake Adelman, I'm an enthusiastic and self-motivated developer.")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, "Hi! My name is Jake Adelman. I build products people love.")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     styleId: "3804224205",
-    css: "#paragraph-explain.jsx-3804224205{font-weight:600;margin:0;padding:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tYW54L3Byb2plY3RzL2Jsb2cvY29tcG9uZW50cy9pbmRleC9FeHBsYWluLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXVCTyxBQUcyQixnQkFDUCxTQUNDLFVBQ1oiLCJmaWxlIjoiL1VzZXJzL21hbngvcHJvamVjdHMvYmxvZy9jb21wb25lbnRzL2luZGV4L0V4cGxhaW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBDYXJkLFxuICBDYXJkSW1nLFxuICBDYXJkVGV4dCxcbiAgQ2FyZEJvZHksXG4gIENhcmRUaXRsZSxcbiAgQ2FyZFN1YnRpdGxlLFxuICBCdXR0b25cbn0gZnJvbSBcInJlYWN0c3RyYXBcIjtcblxuZXhwb3J0IGRlZmF1bHQgKCkgPT4gKFxuICA8ZGl2IGlkPVwiZXhwbGFpblwiPlxuICAgIDxDYXJkPlxuICAgICAgPENhcmRCb2R5IGlkPVwiaW5zaWRlLWV4cGxhaW5cIj5cbiAgICAgICAgPENhcmRUZXh0IGlkPVwidGV4dC1leHBsYWluXCI+XG4gICAgICAgICAgPHAgaWQ9XCJwYXJhZ3JhcGgtZXhwbGFpblwiPlxuICAgICAgICAgICAgSGkhIE15IG5hbWUgaXMgSmFrZSBBZGVsbWFuLCBJJ20gYW4gZW50aHVzaWFzdGljIGFuZCBzZWxmLW1vdGl2YXRlZFxuICAgICAgICAgICAgZGV2ZWxvcGVyLlxuICAgICAgICAgIDwvcD5cbiAgICAgICAgPC9DYXJkVGV4dD5cbiAgICAgIDwvQ2FyZEJvZHk+XG4gICAgPC9DYXJkPlxuICAgIDxzdHlsZSBqc3g+XG4gICAgICB7YFxuICAgICAgICAjcGFyYWdyYXBoLWV4cGxhaW4ge1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIH1cbiAgICAgIGB9XG4gICAgPC9zdHlsZT5cbiAgPC9kaXY+XG4pO1xuIl19 */\n/*@ sourceURL=/Users/manx/projects/blog/components/index/Explain.js */",
+    css: "#paragraph-explain.jsx-3804224205{font-weight:600;margin:0;padding:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tYW54L3Byb2plY3RzL2Jsb2cvY29tcG9uZW50cy9pbmRleC9FeHBsYWluLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXNCTyxBQUcyQixnQkFDUCxTQUNDLFVBQ1oiLCJmaWxlIjoiL1VzZXJzL21hbngvcHJvamVjdHMvYmxvZy9jb21wb25lbnRzL2luZGV4L0V4cGxhaW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBDYXJkLFxuICBDYXJkSW1nLFxuICBDYXJkVGV4dCxcbiAgQ2FyZEJvZHksXG4gIENhcmRUaXRsZSxcbiAgQ2FyZFN1YnRpdGxlLFxuICBCdXR0b25cbn0gZnJvbSBcInJlYWN0c3RyYXBcIjtcblxuZXhwb3J0IGRlZmF1bHQgKCkgPT4gKFxuICA8ZGl2IGlkPVwiZXhwbGFpblwiPlxuICAgIDxDYXJkPlxuICAgICAgPENhcmRCb2R5IGlkPVwiaW5zaWRlLWV4cGxhaW5cIj5cbiAgICAgICAgPENhcmRUZXh0IGlkPVwidGV4dC1leHBsYWluXCI+XG4gICAgICAgICAgPHAgaWQ9XCJwYXJhZ3JhcGgtZXhwbGFpblwiPlxuICAgICAgICAgICAgSGkhIE15IG5hbWUgaXMgSmFrZSBBZGVsbWFuLiBJIGJ1aWxkIHByb2R1Y3RzIHBlb3BsZSBsb3ZlLlxuICAgICAgICAgIDwvcD5cbiAgICAgICAgPC9DYXJkVGV4dD5cbiAgICAgIDwvQ2FyZEJvZHk+XG4gICAgPC9DYXJkPlxuICAgIDxzdHlsZSBqc3g+XG4gICAgICB7YFxuICAgICAgICAjcGFyYWdyYXBoLWV4cGxhaW4ge1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIH1cbiAgICAgIGB9XG4gICAgPC9zdHlsZT5cbiAgPC9kaXY+XG4pO1xuIl19 */\n/*@ sourceURL=/Users/manx/projects/blog/components/index/Explain.js */",
     __self: this
   }));
 });
@@ -34548,18 +34548,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 6:
-/*!********************!*\
-  !*** os (ignored) ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 7:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -34570,6 +34559,17 @@ __NEXT_REGISTER_PAGE('/', function() {
 module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
 return { page: module.exports.default }});
+
+/***/ }),
+
+/***/ 6:
+/*!********************!*\
+  !*** os (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ }),
 
@@ -34584,5 +34584,5 @@ module.exports = dll_831a3634f66cb1dada0c;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js","styles"]]]));;
+},[[3,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=index.js.map

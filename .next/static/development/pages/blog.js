@@ -34520,7 +34520,18 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 6:
+/*!********************!*\
+  !*** os (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 7:
 /*!*****************************!*\
   !*** multi ./pages/blog.js ***!
   \*****************************/
@@ -34531,17 +34542,6 @@ __NEXT_REGISTER_PAGE('/blog', function() {
 module.exports = __webpack_require__(/*! ./pages/blog.js */"./pages/blog.js");
 
 return { page: module.exports.default }});
-
-/***/ }),
-
-/***/ 6:
-/*!********************!*\
-  !*** os (ignored) ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ }),
 
@@ -34556,5 +34556,5 @@ module.exports = dll_831a3634f66cb1dada0c;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]));;
+},[[7,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=blog.js.map

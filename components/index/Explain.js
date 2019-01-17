@@ -14,8 +14,7 @@ export default () => (
       <CardBody id="inside-explain">
         <CardText id="text-explain">
           <p id="paragraph-explain">
-            Hi! My name is Jake Adelman, I'm an enthusiastic and self-motivated
-            developer.
+            Hi! My name is Jake Adelman. I build products people love.
           </p>
         </CardText>
       </CardBody>
