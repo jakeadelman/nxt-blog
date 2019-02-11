@@ -42,31 +42,18 @@ export default class MyNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink>
-                  <Link href="/blog">
-                    <a className="navbar-link">Blog</a>
-                  </Link>
+                <NavLink href="/resume" className="navbar-link">
+                  Resume
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://github.com/reactstrap/reactstrap"
+                  href="https://github.com/jakeadelman/"
                   className="navbar-link"
                 >
                   Github
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
@@ -83,3 +70,15 @@ export default class MyNavbar extends React.Component {
     );
   }
 }
+
+/* <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>Option 1</DropdownItem>
+                  <DropdownItem>Option 2</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Reset</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown> */

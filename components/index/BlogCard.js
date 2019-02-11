@@ -45,7 +45,7 @@ export default class extends React.Component {
   render() {
     return (
       <div className="blog-cards-homepage">
-        <h1 className="home-blog-title">scribbles from the blog..</h1>
+        <h1 className="home-blog-title">from the blog..</h1>
         {this.state.posts.map((each, i) => (
           <BlogArticleCard
             title={each.fields.title}

@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
 import React from "react";
 import Layout from "../components/layouts/HomePage";
-import BlogCard from "../components/index/BlogCard";
+import Projects from "../components/Projects";
 
 import Explain from "../components/index/Explain";
 import HomeDiv from "../components/index/HomeDiv";
@@ -11,6 +11,7 @@ import Fonts from "../components/index/Fonts";
 import Fade from "react-reveal/Fade";
 import Rotate from "react-reveal/Rotate";
 import Flip from "react-reveal/Flip";
+import MyStack from "../components/MyStack";
 
 class Index extends React.Component {
   render() {
@@ -24,7 +25,10 @@ class Index extends React.Component {
                 <Explain />
               </Flip>
               <Flip left>
-                <BlogCard />
+                <Projects />
+              </Flip>
+              <Flip left>
+                <MyStack />
               </Flip>
             </div>
           </div>

@@ -1,6 +1,5 @@
 const withCSS = require("@zeit/next-css");
+const withAssetsImport = require("next-assets-import");
 
-module.exports = withCSS({
-  /* my next config */
-  // cssModules: true
-});
+module.exports = withCSS();
+// module.exports = withAssetsImport();
