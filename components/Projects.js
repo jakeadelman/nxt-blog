@@ -72,7 +72,7 @@ export default props => (
           <div style={{ textAlign: "center", marginTop: "1.4em" }}>
             Technologies used in this project
           </div>
-          <div style={{ display: "flex", "margin-top": "1em" }}>
+          <div style={{ display: "flex", marginTop: "1em" }}>
             <div className="pointdivs">
               <ul>
                 <li className="list-header">Frontend:</li>
